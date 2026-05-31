@@ -4,1030 +4,485 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>40 сценариев для вирусных Reels</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  :root {
-    --bg: #f7f4f0;
-    --bg-dark: #3a3632;
-    --text: #2d2a26;
-    --text-light: #6b6560;
-    --accent: #710C04;
-    --accent-light: #c9a07a;
-    --line: #d9d2ca;
-    --white: #fdfcfa;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --accent: #710C04; }
 
   body {
-    font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
     font-size: 17px;
-    line-height: 1.7;
-    font-weight: 400;
+    line-height: 1.75;
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── Top bar ── */
-  .top-bar {
-    background: var(--bg-dark);
-    height: 48px;
-    width: 100%;
-  }
-
-  /* ── Container ── */
-  .container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-
-  /* ── Hero ── */
-  .hero {
-    padding: 100px 0 80px;
-    text-align: center;
-  }
-
-  .hero__label {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 32px;
+  /* ── Nav ── */
+  .nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 16px;
+    padding: 16px 48px;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 100;
   }
-
-  .hero__label::before {
-    content: '';
-    width: 40px;
-    height: 1px;
-    background: var(--accent);
-  }
-
-  .hero__title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(38px, 5.5vw, 64px);
-    font-weight: 400;
-    line-height: 1.2;
-    color: var(--text);
-    margin-bottom: 16px;
-  }
-
-  .hero__title em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .hero__subtitle {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(18px, 2.5vw, 24px);
-    font-weight: 400;
-    color: var(--text-light);
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-  }
-
-  .hero__meta {
-    font-size: 15px;
-    color: var(--text-light);
-    margin-top: 24px;
-    letter-spacing: 2px;
-  }
-
-  /* ── Divider ── */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--line);
-    margin: 0;
-  }
-
-  /* ── Intro section ── */
-  .intro {
-    padding: 80px 0;
-    text-align: center;
-  }
-
-  .intro__text {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(22px, 3vw, 32px);
-    font-weight: 400;
-    line-height: 1.55;
-    max-width: 780px;
-    margin: 0 auto;
-    color: var(--text);
-  }
-
-  .intro__text em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  /* ── Section header ── */
-  .section {
-    padding: 80px 0 60px;
-  }
-
-  .section__label {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 28px;
+  .nav__logo {
+    text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
   }
-
-  .section__label::before {
-    content: '';
-    width: 40px;
-    height: 1px;
-    background: var(--accent);
-  }
-
-  .section__title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(32px, 4.5vw, 52px);
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 20px;
-  }
-
-  .section__title em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .section__desc {
-    font-size: 17px;
-    color: var(--text-light);
-    max-width: 640px;
-    line-height: 1.7;
-  }
-
-  /* ── 3-col grid ── */
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px 40px;
-    padding: 48px 0;
-    border-top: 1px solid var(--line);
-  }
-
-  .grid-3__item {
-    /* nothing extra needed */
-  }
-
-  .grid-3__num {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
-    font-size: 15px;
-    color: var(--accent);
-    margin-bottom: 16px;
-  }
-
-  .grid-3__heading {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 1.35;
-    margin-bottom: 14px;
-  }
-
-  .grid-3__text {
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--text-light);
-  }
-
-  /* ── Headlines list ── */
-  .headlines {
-    padding: 20px 0 60px;
-  }
-
-  .headline-item {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    gap: 0 24px;
-    padding: 28px 0;
-    border-bottom: 1px solid var(--line);
-    align-items: start;
-  }
-
-  .headline-item:first-child {
-    border-top: 1px solid var(--line);
-  }
-
-  .headline-item__num {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
-    font-size: 15px;
-    color: var(--accent);
-    padding-top: 4px;
-  }
-
-  .headline-item__text {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: var(--text);
-  }
-
-  /* ── Scenario card ── */
-  .scenario {
-    padding: 60px 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .scenario:last-of-type {
-    border-bottom: none;
-  }
-
-  .scenario__header {
-    margin-bottom: 36px;
-  }
-
-  .scenario__num {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
-    font-size: 15px;
-    color: var(--accent);
-    margin-bottom: 12px;
-  }
-
-  .scenario__title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(24px, 3vw, 32px);
-    font-weight: 500;
-    line-height: 1.35;
-  }
-
-  .scenario__points {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom: 32px;
-  }
-
-  .scenario__point {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-
-  .scenario__point-label {
-    font-weight: 600;
-    font-size: 16px;
-    color: var(--text);
-  }
-
-  .scenario__point-text {
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--text-light);
-  }
-
-  .scenario__ending {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
-    font-size: 19px;
-    line-height: 1.6;
-    color: var(--text);
-    padding: 24px 0;
-    border-top: 1px solid var(--line);
-    margin-top: 12px;
-  }
-
-  .scenario__tip {
-    background: var(--white);
-    border-left: 3px solid var(--accent);
-    padding: 20px 24px;
-    margin-top: 20px;
-    border-radius: 0 8px 8px 0;
-    font-size: 15px;
-    line-height: 1.65;
-    color: var(--text-light);
-  }
-
-  .scenario__tip strong {
-    color: var(--accent);
-    font-weight: 600;
-  }
-
-  /* ── Info box ── */
-  .info-box {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 48px;
-    margin: 48px 0;
-  }
-
-  .info-box__title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 20px;
-  }
-
-  .info-box__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .info-box__list li {
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--text-light);
-    padding-left: 20px;
-    position: relative;
-  }
-
-  .info-box__list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-  }
-
-  /* ── Prompt box ── */
-  .prompt-box {
-    background: var(--bg-dark);
-    color: var(--white);
-    border-radius: 12px;
-    padding: 48px;
-    margin: 48px 0;
-  }
-
-  .prompt-box__title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: var(--accent-light);
-  }
-
-  .prompt-box__subtitle {
+  .nav__logo img { height: 30px; width: auto; }
+  .nav__logo-name {
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
-    color: #a09a94;
-    margin-bottom: 24px;
+    font-weight: 500;
+    color: #888;
     letter-spacing: 0.5px;
   }
 
-  .prompt-box__text {
-    font-size: 15px;
-    line-height: 1.8;
-    color: #d5cfc8;
+  /* ── Container ── */
+  .container { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── Hero ── */
+  .hero { padding: 60px 0 48px; }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 5px 16px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero__desc { font-size: 18px; color: #666; line-height: 1.7; }
+  .hero__meta {
+    font-size: 14px;
+    color: #999;
+    margin-top: 16px;
+    letter-spacing: 1px;
   }
 
-  /* ── Dark section ── */
-  .dark-section {
-    background: var(--bg-dark);
-    color: var(--white);
-    padding: 80px 0;
+  /* ── Intro ── */
+  .intro-bold {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.65;
+    color: #1a1a1a;
+    padding: 40px 0 16px;
+  }
+  .intro-text {
+    font-size: 17px;
+    color: #444;
+    line-height: 1.75;
+    padding-bottom: 48px;
   }
 
-  .dark-section .section__label {
-    color: var(--accent-light);
+  /* ── Section heading ── */
+  .section-heading {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+    padding: 56px 0 24px;
+    border-top: 1px solid #e8e8e8;
+  }
+  .section-heading span { color: var(--accent); margin-right: 8px; }
+  .section-heading em { font-style: italic; color: var(--accent); }
+
+  /* ── Highlight block ── */
+  .highlight {
+    background: #f5f5f5;
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #444;
   }
 
-  .dark-section .section__label::before {
-    background: var(--accent-light);
+  /* ── Sub heading ── */
+  .sub-heading {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 36px 0 16px;
   }
 
-  .dark-section .section__title {
-    color: var(--white);
-  }
+  /* ── Text ── */
+  .text { font-size: 17px; color: #444; line-height: 1.75; margin-bottom: 16px; }
 
-  .dark-section .section__title em {
-    color: var(--accent-light);
+  /* ── List ── */
+  .guide-list { list-style: none; margin: 16px 0 24px; }
+  .guide-list li {
+    font-size: 16px; line-height: 1.75; color: #444;
+    padding: 8px 0 8px 20px; position: relative;
+    border-bottom: 1px solid #f0f0f0;
   }
+  .guide-list li:last-child { border-bottom: none; }
+  .guide-list li::before {
+    content: ''; position: absolute; left: 0; top: 16px;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+  }
+  .guide-list li strong { color: #1a1a1a; }
 
-  .dark-section .section__desc {
-    color: #a09a94;
+  /* ── Prompt box ── */
+  .prompt-box {
+    background: #1a1a1a;
+    color: #e0e0e0;
+    padding: 36px;
+    margin: 32px 0;
   }
+  .prompt-box__title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 20px; font-weight: 700;
+    color: #c9a07a;
+    margin-bottom: 6px;
+  }
+  .prompt-box__subtitle { font-size: 13px; color: #888; margin-bottom: 20px; }
+  .prompt-box__text { font-size: 15px; line-height: 1.8; color: #bbb; }
 
-  .dark-section .grid-3 {
-    border-top-color: #554f49;
+  /* ── Headlines ── */
+  .headline-list { list-style: none; margin: 16px 0 32px; }
+  .headline-list li {
+    display: flex; gap: 16px; padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0; align-items: baseline;
   }
+  .headline-list li:first-child { border-top: 1px solid #f0f0f0; }
+  .headline-num {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: italic; font-size: 15px;
+    color: var(--accent); min-width: 28px; flex-shrink: 0;
+  }
+  .headline-text { font-size: 17px; line-height: 1.6; color: #1a1a1a; font-weight: 500; }
 
-  .dark-section .grid-3__num {
-    color: var(--accent-light);
+  /* ── Scenario card ── */
+  .scenario-card {
+    border: 1px solid #e8e8e8;
+    padding: 32px; margin: 24px 0; background: #f9f9f9;
   }
-
-  .dark-section .grid-3__heading {
-    color: var(--white);
+  .scenario-card__num {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: italic; font-size: 14px;
+    color: var(--accent); letter-spacing: 1px; margin-bottom: 8px;
   }
-
-  .dark-section .grid-3__text {
-    color: #a09a94;
+  .scenario-card__title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 20px; font-weight: 700; line-height: 1.4; margin-bottom: 20px;
   }
+  .scenario-card__point { margin-bottom: 14px; }
+  .scenario-card__point-label { font-weight: 600; font-size: 16px; color: #1a1a1a; }
+  .scenario-card__point-text { font-size: 15px; color: #666; line-height: 1.7; }
+  .scenario-card__ending {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 17px; font-style: italic; color: #1a1a1a;
+    padding-top: 16px; margin-top: 16px; border-top: 1px solid #e0e0e0;
+  }
+  .scenario-card__tip {
+    background: #f0f0f0; padding: 14px 18px; margin-top: 16px;
+    font-size: 14px; color: #555; line-height: 1.65;
+  }
+  .scenario-card__tip strong { color: var(--accent); }
 
   /* ── Footer ── */
   .footer {
-    background: var(--bg-dark);
-    padding: 48px 0;
-    text-align: center;
-    color: #7a746e;
-    font-size: 14px;
-    border-top: 1px solid #554f49;
+    text-align: center; padding: 64px 24px;
+    border-top: 1px solid #e8e8e8; margin-top: 64px;
+    color: #999; font-size: 14px;
   }
-
-  .footer a {
-    color: var(--accent-light);
-    text-decoration: none;
+  .footer-note {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 18px; font-style: italic; color: #444;
+    text-align: center; padding: 48px 24px 0;
   }
+  .footer-note em { color: var(--accent); }
 
   /* ── Responsive ── */
   @media (max-width: 768px) {
-    .container {
-      padding: 0 24px;
-    }
-
-    .grid-3 {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-
-    .hero {
-      padding: 64px 0 48px;
-    }
-
-    .section {
-      padding: 56px 0 40px;
-    }
-
-    .headline-item {
-      grid-template-columns: 48px 1fr;
-      gap: 0 16px;
-    }
-
-    .headline-item__text {
-      font-size: 17px;
-    }
-
-    .info-box, .prompt-box {
-      padding: 28px;
-    }
-
-    .scenario {
-      padding: 40px 0;
-    }
+    .nav { padding: 16px 20px; }
+    .hero h1 { font-size: 28px; }
+    .section-heading { font-size: 24px; }
+    .scenario-card { padding: 20px; }
+    .prompt-box { padding: 24px; }
   }
 </style>
 </head>
 <body>
 
-<!-- Top bar -->
-<div class="top-bar"></div>
+<nav class="nav">
+  <a class="nav__logo" href="#">
+    <img src="logo-ms.svg" alt="MS">
+    <span class="nav__logo-name">maysoulme</span>
+  </a>
+</nav>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="container">
-    <div class="hero__label">Гайд</div>
-    <h1 class="hero__title">
-      40 сценариев<br>для <em>вирусных Reels</em>
-    </h1>
-    <p class="hero__subtitle">30 текстовых + 10 разговорных</p>
-    <p class="hero__meta">Психология &middot; Отношения &middot; Личностный рост</p>
+<div class="container">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="badge">Гайд</div>
+    <h1>40 сценариев для <em>вирусных Reels</em></h1>
+    <p class="hero__desc">Всё, что нужно, чтобы снимать вирусные Reels без лишних усилий — с готовыми заголовками, сценариями и чёткими инструкциями по съёмке и оформлению.</p>
+    <p class="hero__meta">30 текстовых + 10 разговорных &middot; Психология &middot; Отношения &middot; Личностный рост</p>
   </div>
-</section>
 
-<div class="container"><hr class="divider"></div>
+  <p class="intro-bold">Этот гайд — для тех, кто только начинает. Неважно, блогер ты, психолог или просто хочешь расти в Instagram.</p>
+  <p class="intro-text">Здесь — готовые промты и сценарии, которые можно копировать и использовать сразу.</p>
 
-<!-- Intro -->
-<section class="intro">
-  <div class="container">
-    <p class="intro__text">
-      Этот гайд создан для тех, кто хочет снимать вирусные Reels
-      без лишних усилий — с готовыми заголовками,
-      сценариями и чёткими инструкциями
-      по съёмке и <em>оформлению.</em>
+  <!-- ═══════════════════════════════════ -->
+  <!-- ЧАСТЬ 1. ТЕКСТОВЫЕ РОЛИКИ -->
+  <!-- ═══════════════════════════════════ -->
+
+  <h2 class="section-heading"><span>01.</span> Текстовые <em>ролики</em></h2>
+
+  <div class="highlight">
+    Текстовый ролик — это короткое видео (5–10 сек) с тематическим фоном и вирусным заголовком. Весь смысл — в заголовке и посте под роликом.
+  </div>
+
+  <h3 class="sub-heading">Структура публикации</h3>
+  <ul class="guide-list">
+    <li><strong>Видео:</strong> короткое тематическое видео 5–10 секунд, соответствующее теме заголовка</li>
+    <li><strong>Музыка:</strong> ненавязчивая, без слов, приятная — та, которую захочется переслушивать. Выбирай из рекомендаций в редакторе</li>
+    <li><strong>Заголовок:</strong> минималистичный, чёткий шрифт, хорошо читается поверх видео</li>
+    <li><strong>Оформление:</strong> следи, чтобы текст не накладывался на лайки, комментарии и строку с ником — это одна из самых частых ошибок</li>
+    <li><strong>Пост:</strong> ~1700 символов по структуре ниже</li>
+  </ul>
+
+  <h3 class="sub-heading">Структура поста</h3>
+  <ul class="guide-list">
+    <li>5 пронумерованных пунктов, каждый — уникальный по подаче</li>
+    <li>Финальная мысль-удар — ёмко, без воды</li>
+    <li>Подводка к теме блога или бесплатного материала</li>
+    <li>Призыв к подписке — органично, не навязчиво</li>
+  </ul>
+
+  <div class="highlight">
+    <strong>Советы по съёмке:</strong> Видео подбирай по смыслу заголовка — не рандомно. Проверяй предпросмотр: текст не должен перекрывать кнопки и ник. Музыка — инструментальная, без слов, цепляющая с первых секунд.
+  </div>
+
+  <!-- Промт -->
+  <h3 class="sub-heading">Промт для написания постов</h3>
+  <p class="text">Скопируй промт ниже, вставь в нейросеть, в конце добавь нужный заголовок из списка.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-box__title">Готовый промт</div>
+    <div class="prompt-box__subtitle">Копируй &rarr; Вставляй в нейросеть &rarr; Добавляй заголовок</div>
+    <p class="prompt-box__text">
+      Ты — автор русскоязычного Instagram-блога о психологии, отношениях и личностном росте для женщин. Твоя задача — по присланному заголовку написать пост ~1700 символов строго по структуре: 5 пронумерованных пунктов + финальная мысль-удар + призыв к подписке.
+      <br><br>
+      Каждый пункт уникален по подаче: один — история или микросцена, другой — цифры и факты, третий — провокационный тезис, четвёртый — зеркало читателя, пятый — инсайт или внутренний вопрос. Без воды, без вступлений, без морализаторства. Первая строка первого пункта — максимально цепляющая, она видна в Reels.
+      <br><br>
+      Текст дышит: короткие абзацы, пустая строка между пунктами, живые глаголы, конкретные детали вместо абстракций. Обращение на «ты». Только русские кавычки. Без точек в конце абзацев.
+      <br><br>
+      После финальной мысли — призыв к подписке: «Если хочешь в 2026 году стать лучшей версией себя — оставайся со мной в блоге. Здесь я каждый день делюсь тем, что реально работает».
     </p>
   </div>
-</section>
 
-<div class="container"><hr class="divider"></div>
+  <!-- 30 заголовков -->
+  <h3 class="sub-heading">30 заголовков для текстовых роликов</h3>
+  <p class="text">Каждый заголовок — готов к публикации. Бери, снимай, добавляй пост по промту выше.</p>
 
-<!-- What's inside -->
-<section class="section">
-  <div class="container">
-    <div class="section__label">Что внутри</div>
-    <h2 class="section__title">
-      Всё, что нужно для<br><em>вирусных публикаций</em>
-    </h2>
+  <ol class="headline-list">
+    <li><span class="headline-num">01.</span><span class="headline-text">Упражнение, которое психотерапевты дают в первую очередь, когда человек говорит «я не знаю, кто я и чего хочу»:</span></li>
+    <li><span class="headline-num">02.</span><span class="headline-text">Самый вежливый ответ на ХАМСТВО, после которого к тебе больше не лезут (используют юристы, психиатры и УВЕРЕННЫЕ люди):</span></li>
+    <li><span class="headline-num">03.</span><span class="headline-text">Задай эти 8 вопросов своему парню / подруге, и вы ТОЧНО будете смеяться весь вечер:</span></li>
+    <li><span class="headline-num">04.</span><span class="headline-text">Странные лайфхаки, после которых станешь в несколько раз ухоженнее, если выдержишь хотя бы 7 дней:</span></li>
+    <li><span class="headline-num">05.</span><span class="headline-text">Я спросила у психолога с 20-летним стажем: как выглядит человек, которому по-настоящему плохо? Ответ был неожиданным:</span></li>
+    <li><span class="headline-num">06.</span><span class="headline-text">У тех, кому суждено быть вместе, никогда не складывается с первого раза — и вот как обычно происходит:</span></li>
+    <li><span class="headline-num">07.</span><span class="headline-text">Фильмы, после которых люди увольнялись, разводились и меняли жизнь за ночь (не смотри их один):</span></li>
+    <li><span class="headline-num">08.</span><span class="headline-text">Я была жутко шокирована, когда узнала метод КГБ «Как стать другим человеком за 3 дня». Попробуй сегодня:</span></li>
+    <li><span class="headline-num">09.</span><span class="headline-text">Сначала смешно, потом реально страшно: самый СТРАННЫЙ способ выбраться из долгов, который реально работает:</span></li>
+    <li><span class="headline-num">10.</span><span class="headline-text">Жуткая история: как один профессор мне доказал, что можно заставить себя разлюбить человека за 12 минут (метод работает):</span></li>
+    <li><span class="headline-num">11.</span><span class="headline-text">По каким 5 привычкам видно, что девушка выросла в бедной семье:</span></li>
+    <li><span class="headline-num">12.</span><span class="headline-text">10 свиданий, которые стоит попробовать каждой паре, чтобы снова загорелись глаза:</span></li>
+    <li><span class="headline-num">13.</span><span class="headline-text">Когда Бог хочет понять, искренняя ли между вами любовь — он проведёт пару через эти 3 испытания:</span></li>
+    <li><span class="headline-num">14.</span><span class="headline-text">Психолог мне рассказал, что есть сны, которые снятся перед ОГРОМНЫМИ переменами. Разверни и читай:</span></li>
+    <li><span class="headline-num">15.</span><span class="headline-text">Когда двум людям суждено быть вместе — происходят эти 7 вещей:</span></li>
+    <li><span class="headline-num">16.</span><span class="headline-text">Психолог дал мне список из 7 фраз, которые говорят только люди с настоящей внутренней силой. Я нашла у себя 4:</span></li>
+    <li><span class="headline-num">17.</span><span class="headline-text">Один тест из 3 вопросов показывает, чего ты на самом деле боишься в жизни. Я была честна с собой — и это изменило всё:</span></li>
+    <li><span class="headline-num">18.</span><span class="headline-text">Есть тип людей, которых невозможно сломить. Психиатры называют у них 5 общих черт. Разверни и проверь себя:</span></li>
+    <li><span class="headline-num">19.</span><span class="headline-text">Я узнала, какие детские воспоминания формируют характер взрослого человека — и вдруг многое встало на своё место:</span></li>
+    <li><span class="headline-num">20.</span><span class="headline-text">По каким 6 деталям в поведении сразу видно, что человек вырос в любви (и это не то, о чём ты думаешь):</span></li>
+    <li><span class="headline-num">21.</span><span class="headline-text">Есть вопрос, который психотерапевты задают себе каждое утро. Я начала делать то же самое — и через неделю стала другим человеком:</span></li>
+    <li><span class="headline-num">22.</span><span class="headline-text">Как выглядит человек, у которого внутри — мир, а не война. 8 признаков, которые не врут:</span></li>
+    <li><span class="headline-num">23.</span><span class="headline-text">Учёные выяснили: у каждого из нас есть один момент в прошлом, который до сих пор управляет нашими решениями. Вот как его найти:</span></li>
+    <li><span class="headline-num">24.</span><span class="headline-text">Странный вопрос, который я задала себе в 3 часа ночи — и он перевернул моё представление о себе:</span></li>
+    <li><span class="headline-num">25.</span><span class="headline-text">Нейробиологи говорят: есть одна фраза, которую мы говорим себе каждый день — и именно она решает, будем ли мы счастливы:</span></li>
+    <li><span class="headline-num">26.</span><span class="headline-text">По каким 5 реакциям в конфликте сразу видно, кем человек был в детстве дома:</span></li>
+    <li><span class="headline-num">27.</span><span class="headline-text">Я спросила у профессора психологии: что отличает людей, которые реально меняют жизнь, от тех, кто только планирует? Ответ оказался неудобным:</span></li>
+    <li><span class="headline-num">28.</span><span class="headline-text">Есть тип людей, рядом с которыми хочется стать лучше просто потому, что они существуют. Вот как они устроены внутри:</span></li>
+    <li><span class="headline-num">29.</span><span class="headline-text">Жуткое открытие: оказывается, большинство людей всю жизнь живут чужими мечтами и узнают об этом слишком поздно. Проверь себя прямо сейчас:</span></li>
+    <li><span class="headline-num">30.</span><span class="headline-text">Что о тебе говорит то, как именно ты отдыхаешь — психолог объяснил за 2 минуты, и я не могла поверить, насколько точно:</span></li>
+  </ol>
 
-    <div class="grid-3">
-      <div class="grid-3__item">
-        <div class="grid-3__num">№ 01</div>
-        <h3 class="grid-3__heading">Часть 1 — Текстовые ролики</h3>
-        <p class="grid-3__text">30 готовых заголовков на тему психологии, отношений и личностного роста. К каждому — инструкция по публикации и промт для создания поста.</p>
-      </div>
-      <div class="grid-3__item">
-        <div class="grid-3__num">№ 02</div>
-        <h3 class="grid-3__heading">Часть 2 — Разговорные ролики</h3>
-        <p class="grid-3__text">10 сценариев с подробной раскадровкой для роликов на камеру. Цель — раскрыть личный бренд и захватить широкую аудиторию.</p>
-      </div>
-      <div class="grid-3__item">
-        <div class="grid-3__num">№ 03</div>
-        <h3 class="grid-3__heading">Готовые промты</h3>
-        <p class="grid-3__text">Скопируй промт, вставь в нейросеть, добавь заголовок — и получи готовый пост на ~1700 символов. Всё уже продумано за тебя.</p>
-      </div>
-    </div>
+  <!-- ═══════════════════════════════════ -->
+  <!-- ЧАСТЬ 2. РАЗГОВОРНЫЕ РОЛИКИ -->
+  <!-- ═══════════════════════════════════ -->
+
+  <h2 class="section-heading"><span>02.</span> Разговорные <em>ролики</em></h2>
+
+  <div class="highlight">
+    Разговорные ролики — это видео на камеру, где ты говоришь напрямую с аудиторией. Цель — раскрыть личный бренд, завоевать доверие и охватить широкую аудиторию.
   </div>
-</section>
 
-<!-- ЧАСТЬ 1 — dark section -->
-<section class="dark-section">
-  <div class="container">
-    <div class="section__label">Часть 1</div>
-    <h2 class="section__title">
-      Текстовые ролики.<br><em>Структура и правила</em>
-    </h2>
-    <p class="section__desc">Текстовый ролик — это короткое видео (5–10 сек) с тематическим фоном и вирусным заголовком. Весь смысл — в заголовке и посте под роликом.</p>
+  <h3 class="sub-heading">Базовые правила съёмки</h3>
+  <ul class="guide-list">
+    <li>Никаких пауз и воды — лента рекомендаций смотрится быстро, только по делу</li>
+    <li>Длина — не более 40–50 секунд (для новичков: до 40 секунд)</li>
+    <li>Темп: можно ускорить в редакторе до 1.1–1.2 — придаёт динамику</li>
+    <li>Снимай при дневном или хорошем искусственном освещении — свет важнее всего остального</li>
+    <li>Звук: петличный микрофон — идеально. Проводные наушники с микрофоном — тоже хорошо</li>
+    <li>Без фильтров и масок — естественность = доверие</li>
+    <li>Говори с эмоцией, соответствующей теме ролика: не каменное лицо, а живая подача</li>
+    <li>Все паузы и «эм», «ну» — вырезать при монтаже</li>
+  </ul>
 
-    <div class="grid-3">
-      <div class="grid-3__item">
-        <div class="grid-3__num">№ 01</div>
-        <h3 class="grid-3__heading">Видео</h3>
-        <p class="grid-3__text">Короткое тематическое видео 5–10 секунд, соответствующее теме заголовка. Подбирай по смыслу — не рандомно.</p>
-      </div>
-      <div class="grid-3__item">
-        <div class="grid-3__num">№ 02</div>
-        <h3 class="grid-3__heading">Музыка</h3>
-        <p class="grid-3__text">Ненавязчивая, без слов, приятная — та, которую захочется переслушивать. Инструментальная, цепляющая с первых секунд.</p>
-      </div>
-      <div class="grid-3__item">
-        <div class="grid-3__num">№ 03</div>
-        <h3 class="grid-3__heading">Заголовок</h3>
-        <p class="grid-3__text">Минималистичный, чёткий шрифт, хорошо читается поверх видео. Текст не должен перекрывать кнопки и ник.</p>
-      </div>
-      <div class="grid-3__item">
-        <div class="grid-3__num">№ 04</div>
-        <h3 class="grid-3__heading">Оформление</h3>
-        <p class="grid-3__text">Следи, чтобы текст не накладывался на лайки, комментарии и строку с ником — это одна из самых частых ошибок.</p>
-      </div>
-      <div class="grid-3__item">
-        <div class="grid-3__num">№ 05</div>
-        <h3 class="grid-3__heading">Пост</h3>
-        <p class="grid-3__text">~1700 символов: 5 пронумерованных пунктов, финальная мысль-удар, подводка к блогу и призыв к подписке.</p>
-      </div>
-      <div class="grid-3__item">
-        <div class="grid-3__num">№ 06</div>
-        <h3 class="grid-3__heading">Структура поста</h3>
-        <p class="grid-3__text">Каждый пункт уникален по подаче: история, факты, провокация, зеркало читателя, инсайт. Без воды и вступлений.</p>
-      </div>
-    </div>
+  <div class="highlight">
+    <strong>Лайфхак для тех, кто впервые на камере:</strong> Ставь рядом второй телефон или планшет с текстом сценария. Читаешь один абзац — говоришь. Читаешь следующий — говоришь. Либо используй приложение-суфлёр (SuflerPro или аналог). Так не потеряешь мысль и не забудешь важное.
   </div>
-</section>
 
-<!-- Prompt box -->
-<section class="section">
-  <div class="container">
-    <div class="section__label">Инструмент</div>
-    <h2 class="section__title">
-      Промт для <em>написания постов</em>
-    </h2>
-    <p class="section__desc" style="margin-bottom: 32px;">Скопируй промт ниже, вставь в нейросеть, в конце добавь нужный заголовок из списка.</p>
-
-    <div class="prompt-box">
-      <h3 class="prompt-box__title">Готовый промт</h3>
-      <p class="prompt-box__subtitle">Копируй &rarr; Вставляй в нейросеть &rarr; Добавляй заголовок</p>
-      <p class="prompt-box__text">
-        Ты — автор русскоязычного Instagram-блога о психологии, отношениях и личностном росте для женщин. Твоя задача — по присланному заголовку написать пост ~1700 символов строго по структуре: 5 пронумерованных пунктов (1&#xFE0F;&#x20E3;2&#xFE0F;&#x20E3;3&#xFE0F;&#x20E3;4&#xFE0F;&#x20E3;5&#xFE0F;&#x20E3;) + финальная мысль-удар + призыв к подписке.
-        <br><br>
-        Каждый пункт уникален по подаче: один — история или микросцена, другой — цифры и факты, третий — провокационный тезис, четвёртый — зеркало читателя, пятый — инсайт или внутренний вопрос. Без воды, без вступлений, без морализаторства. Первая строка первого пункта — максимально цепляющая.
-        <br><br>
-        Текст дышит: короткие абзацы, пустая строка между пунктами, живые глаголы, конкретные детали вместо абстракций. Обращение на «ты». Только русские кавычки «». Без точек в конце абзацев.
-        <br><br>
-        После финальной мысли — призыв к подписке: «Если хочешь в 2026 году стать лучшей версией себя — оставайся со мной в блоге. Здесь я каждый день делюсь тем, что реально работает».
-      </p>
-    </div>
+  <div class="highlight">
+    <strong>Советы по съёмке:</strong> Хороший свет + хороший звук = 80% успеха разговорного ролика. Картинка может быть обычной — люди смотрят ради смысла, не ради красоты фона. Говори на темы, которые волнуют ТЕБЯ и большое количество людей одновременно.
   </div>
-</section>
 
-<div class="container"><hr class="divider"></div>
+  <!-- 10 сценариев -->
+  <h3 class="sub-heading">10 сценариев для разговорных роликов</h3>
+  <p class="text">Под каждым сценарием — раскадровка: что говорить, как строить динамику, чем заканчивать.</p>
 
-<!-- 30 заголовков -->
-<section class="section">
-  <div class="container">
-    <div class="section__label">30 заголовков</div>
-    <h2 class="section__title">
-      Заголовки для<br><em>текстовых роликов</em>
-    </h2>
-    <p class="section__desc" style="margin-bottom: 12px;">Каждый заголовок — готов к публикации. Бери, снимай, добавляй пост по промту выше.</p>
-
-    <div class="headlines">
-      <div class="headline-item"><span class="headline-item__num">№ 01</span><p class="headline-item__text">Упражнение, которое психотерапевты дают в первую очередь, когда человек говорит «я не знаю, кто я и чего хочу»:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 02</span><p class="headline-item__text">Самый вежливый ответ на ХАМСТВО, после которого к тебе больше не лезут (используют юристы, психиатры и УВЕРЕННЫЕ люди):</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 03</span><p class="headline-item__text">Задай эти 8 вопросов своему парню / подруге, и вы ТОЧНО будете смеяться весь вечер:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 04</span><p class="headline-item__text">Странные лайфхаки, после которых станешь в несколько раз ухоженнее, если выдержишь хотя бы 7 дней:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 05</span><p class="headline-item__text">Я спросила у психолога с 20-летним стажем: как выглядит человек, которому по-настоящему плохо? Ответ был неожиданным:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 06</span><p class="headline-item__text">У тех, кому суждено быть вместе, никогда не складывается с первого раза — и вот как обычно происходит:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 07</span><p class="headline-item__text">Фильмы, после которых люди увольнялись, разводились и меняли жизнь за ночь (не смотри их один):</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 08</span><p class="headline-item__text">Я была жутко шокирована, когда узнала метод КГБ «Как стать другим человеком за 3 дня». Попробуй сегодня:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 09</span><p class="headline-item__text">Сначала смешно, потом реально страшно: самый СТРАННЫЙ способ выбраться из долгов, который реально работает:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 10</span><p class="headline-item__text">Жуткая история: как один профессор мне доказал, что можно заставить себя разлюбить человека за 12 минут (метод работает):</p></div>
-
-      <div class="headline-item"><span class="headline-item__num">№ 11</span><p class="headline-item__text">По каким 5 привычкам видно, что девушка выросла в бедной семье:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 12</span><p class="headline-item__text">10 свиданий, которые стоит попробовать каждой паре, чтобы снова загорелись глаза:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 13</span><p class="headline-item__text">Когда Бог хочет понять, искренняя ли между вами любовь — он проведёт пару через эти 3 испытания:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 14</span><p class="headline-item__text">Психолог мне рассказал, что есть сны, которые снятся перед ОГРОМНЫМИ переменами. Разверни и читай:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 15</span><p class="headline-item__text">Когда двум людям суждено быть вместе — происходят эти 7 вещей:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 16</span><p class="headline-item__text">Психолог дал мне список из 7 фраз, которые говорят только люди с настоящей внутренней силой. Я нашла у себя 4:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 17</span><p class="headline-item__text">Один тест из 3 вопросов показывает, чего ты на самом деле боишься в жизни. Я была честна с собой — и это изменило всё:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 18</span><p class="headline-item__text">Есть тип людей, которых невозможно сломить. Психиатры называют у них 5 общих черт. Разверни и проверь себя:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 19</span><p class="headline-item__text">Я узнала, какие детские воспоминания формируют характер взрослого человека — и вдруг многое встало на своё место:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 20</span><p class="headline-item__text">По каким 6 деталям в поведении сразу видно, что человек вырос в любви (и это не то, о чём ты думаешь):</p></div>
-
-      <div class="headline-item"><span class="headline-item__num">№ 21</span><p class="headline-item__text">Есть вопрос, который психотерапевты задают себе каждое утро. Я начала делать то же самое — и через неделю стала другим человеком:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 22</span><p class="headline-item__text">Как выглядит человек, у которого внутри — мир, а не война. 8 признаков, которые не врут:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 23</span><p class="headline-item__text">Учёные выяснили: у каждого из нас есть один момент в прошлом, который до сих пор управляет нашими решениями. Вот как его найти:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 24</span><p class="headline-item__text">Странный вопрос, который я задала себе в 3 часа ночи — и он перевернул моё представление о себе:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 25</span><p class="headline-item__text">Нейробиологи говорят: есть одна фраза, которую мы говорим себе каждый день — и именно она решает, будем ли мы счастливы:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 26</span><p class="headline-item__text">По каким 5 реакциям в конфликте сразу видно, кем человек был в детстве дома:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 27</span><p class="headline-item__text">Я спросила у профессора психологии: что отличает людей, которые реально меняют жизнь, от тех, кто только планирует? Ответ оказался неудобным:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 28</span><p class="headline-item__text">Есть тип людей, рядом с которыми хочется стать лучше просто потому, что они существуют. Вот как они устроены внутри:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 29</span><p class="headline-item__text">Жуткое открытие: оказывается, большинство людей всю жизнь живут чужими мечтами и узнают об этом слишком поздно. Проверь себя прямо сейчас:</p></div>
-      <div class="headline-item"><span class="headline-item__num">№ 30</span><p class="headline-item__text">Что о тебе говорит то, как именно ты отдыхаешь — психолог объяснил за 2 минуты, и я не могла поверить, насколько точно:</p></div>
-    </div>
+  <!-- Сценарий 1 -->
+  <div class="scenario-card">
+    <div class="scenario-card__num">Сценарий 01</div>
+    <div class="scenario-card__title">5 вещей, которые не сочетаются с моей внешностью — последняя самая странная</div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Факт 1 — самый хайповый контраст с внешностью.</span> <span class="scenario-card__point-text">Если ты очень красивая — расскажи, сколько книг прочитала или сколько образований получила. Главное — максимально ломает ожидание от внешности.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Факт 2 — «я никогда не [то, что делают все женщины]».</span> <span class="scenario-card__point-text">Никогда не крашу ногти гелем, никогда не смотрю сериалы, никогда не обсуждаю других людей. То, что все считают женской нормой — но ты не делаешь.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Факт 3 — хобби или увлечение не из твоего «образа».</span> <span class="scenario-card__point-text">Если выглядишь как нежная девушка — занимаешься боксом или чинишь машины. Если выглядишь как строгая бизнес-леди — коллекционируешь мягкие игрушки.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Факт 4 — неожиданная реакция в типичной ситуации.</span> <span class="scenario-card__point-text">Все плачут на романтических фильмах — ты смеёшься. Все боятся конфликтов — ты к ним стремишься.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Факт 5 — самое странное, то ради чего досматривали.</span> <span class="scenario-card__point-text">Настолько личное и специфическое, что хочется написать комментарий или переслать подруге.</span></div>
+    <div class="scenario-card__tip"><strong>Совет:</strong> Перед последним фактом сделай паузу в полсекунды и чуть улыбнись — это создаёт предвкушение.</div>
   </div>
-</section>
 
-<!-- ЧАСТЬ 2 — Разговорные ролики -->
-<section class="dark-section">
-  <div class="container">
-    <div class="section__label">Часть 2</div>
-    <h2 class="section__title">
-      Разговорные ролики.<br><em>Правила съёмки</em>
-    </h2>
-    <p class="section__desc">Разговорные ролики — это видео на камеру, где ты говоришь напрямую с аудиторией. Цель — раскрыть личный бренд, завоевать доверие и охватить широкую аудиторию.</p>
-
-    <div class="grid-3">
-      <div class="grid-3__item">
-        <div class="grid-3__num">№ 01</div>
-        <h3 class="grid-3__heading">Темп и длина</h3>
-        <p class="grid-3__text">Никаких пауз и воды. Длина — не более 40–50 секунд. Можно ускорить в редакторе до 1.1–1.2 — придаёт динамику.</p>
-      </div>
-      <div class="grid-3__item">
-        <div class="grid-3__num">№ 02</div>
-        <h3 class="grid-3__heading">Свет и звук</h3>
-        <p class="grid-3__text">Снимай при дневном или хорошем искусственном освещении. Петличный микрофон — идеально. Хороший свет + хороший звук = 80% успеха.</p>
-      </div>
-      <div class="grid-3__item">
-        <div class="grid-3__num">№ 03</div>
-        <h3 class="grid-3__heading">Естественность</h3>
-        <p class="grid-3__text">Без фильтров и масок. Говори с эмоцией, соответствующей теме. Все паузы и «эм», «ну» — вырезать при монтаже.</p>
-      </div>
-    </div>
+  <!-- Сценарий 2 -->
+  <div class="scenario-card">
+    <div class="scenario-card__num">Сценарий 02</div>
+    <div class="scenario-card__title">Фразы, которые я никогда не скажу своему мужчине — даже если очень сильно разозлюсь</div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Фраза 1 — самая популярная, разрушающая всё.</span> <span class="scenario-card__point-text">«Ты никогда», «ты всегда», «я тебя ненавижу». Зрительница сразу узнаёт себя.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Фраза 2 — фраза-манипуляция, которую считают нормальной.</span> <span class="scenario-card__point-text">«Если бы ты любил — ты бы сам догадался». Звучит невинно — но это не так.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Фраза 3 — сравнение с другими мужчинами.</span> <span class="scenario-card__point-text">Почему это минус — одним предложением.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Фраза 4 — самая неожиданная.</span> <span class="scenario-card__point-text">Та, которую многие не считают токсичной — но она таковой является.</span></div>
+    <div class="scenario-card__ending">В конце задай вопрос: а какие фразы вы говорите своему мужчине каждый день?</div>
   </div>
-</section>
 
-<!-- Лайфхак -->
-<section class="section">
-  <div class="container">
-    <div class="info-box">
-      <h3 class="info-box__title">Лайфхак для тех, кто впервые на камере</h3>
-      <ul class="info-box__list">
-        <li>Ставь рядом второй телефон или планшет с текстом сценария</li>
-        <li>Читаешь один абзац — говоришь. Читаешь следующий — говоришь</li>
-        <li>Используй приложение-суфлёр (SuflerPro или аналог)</li>
-        <li>Так не потеряешь мысль и не забудешь важное</li>
-        <li>Картинка может быть обычной — люди смотрят ради смысла, не ради красоты фона</li>
-        <li>Говори на темы, которые волнуют ТЕБЯ и большое количество людей одновременно</li>
-      </ul>
-    </div>
+  <!-- Сценарий 3 -->
+  <div class="scenario-card">
+    <div class="scenario-card__num">Сценарий 03</div>
+    <div class="scenario-card__title">3 типа людей, с которыми я перестала дружить после 25</div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Тип 1 — самый узнаваемый.</span> <span class="scenario-card__point-text">Появляется только когда ему плохо — и исчезает когда хорошо тебе. Один яркий признак поведения — без лишних слов.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Тип 2 — неожиданный, обычно не считают токсичным.</span> <span class="scenario-card__point-text">Вечно соревнующийся. Тот, кто всегда делает твой успех чуть меньше своего.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Тип 3 — самый болезненный.</span> <span class="scenario-card__point-text">Тот, кого любишь — но после которого всегда чувствуешь себя хуже. Именно этот вызывает комментарии и пересылки.</span></div>
+    <div class="scenario-card__tip"><strong>Совет:</strong> Этот ролик хорошо снимать в спокойном настроении, почти задумчиво — не агрессивно. Тогда люди чувствуют что ты говоришь от опыта, а не от обиды.</div>
   </div>
-</section>
 
-<div class="container"><hr class="divider"></div>
-
-<!-- 10 сценариев -->
-<section class="section">
-  <div class="container">
-    <div class="section__label">10 сценариев</div>
-    <h2 class="section__title">
-      Сценарии для<br><em>разговорных роликов</em>
-    </h2>
-    <p class="section__desc">Под каждым сценарием — раскадровка: что говорить, как строить динамику, чем заканчивать.</p>
-
-    <!-- Сценарий 1 -->
-    <div class="scenario">
-      <div class="scenario__header">
-        <div class="scenario__num">Сценарий № 01</div>
-        <h3 class="scenario__title">5 вещей, которые не сочетаются с моей внешностью — последняя самая странная</h3>
-      </div>
-      <div class="scenario__points">
-        <div class="scenario__point">
-          <span class="scenario__point-label">Факт 1 — самый хайповый контраст с внешностью.</span>
-          <span class="scenario__point-text">Если ты очень красивая — расскажи, сколько книг прочитала или сколько образований получила. Главное — максимально ломает ожидание от внешности.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Факт 2 — «я никогда не [то, что делают все женщины]».</span>
-          <span class="scenario__point-text">Никогда не крашу ногти гелем, никогда не смотрю сериалы, никогда не обсуждаю других людей. То, что все считают женской нормой — но ты не делаешь.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Факт 3 — хобби или увлечение не из твоего «образа».</span>
-          <span class="scenario__point-text">Если выглядишь как нежная девушка — занимаешься боксом или чинишь машины. Если выглядишь как строгая бизнес-леди — коллекционируешь мягкие игрушки.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Факт 4 — неожиданная реакция в типичной ситуации.</span>
-          <span class="scenario__point-text">Все плачут на романтических фильмах — ты смеёшься. Все боятся конфликтов — ты к ним стремишься.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Факт 5 — самое странное, то ради чего досматривали.</span>
-          <span class="scenario__point-text">Настолько личное и специфическое, что хочется написать комментарий или переслать подруге.</span>
-        </div>
-      </div>
-      <div class="scenario__tip"><strong>Совет:</strong> Перед последним фактом сделай паузу в полсекунды и чуть улыбнись — это создаёт предвкушение.</div>
-    </div>
-
-    <!-- Сценарий 2 -->
-    <div class="scenario">
-      <div class="scenario__header">
-        <div class="scenario__num">Сценарий № 02</div>
-        <h3 class="scenario__title">Фразы, которые я никогда не скажу своему мужчине — даже если очень сильно разозлюсь</h3>
-      </div>
-      <div class="scenario__points">
-        <div class="scenario__point">
-          <span class="scenario__point-label">Фраза 1 — самая популярная фраза, разрушающая всё.</span>
-          <span class="scenario__point-text">«Ты никогда», «ты всегда», «я тебя ненавижу». Зрительница сразу узнаёт себя.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Фраза 2 — фраза-манипуляция, которую считают нормальной.</span>
-          <span class="scenario__point-text">«Если бы ты любил — ты бы сам догадался». Звучит невинно — но это не так.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Фраза 3 — сравнение с другими мужчинами.</span>
-          <span class="scenario__point-text">Почему это минус — одним предложением.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Фраза 4 — самая неожиданная.</span>
-          <span class="scenario__point-text">Та, которую многие не считают токсичной — но она таковой является.</span>
-        </div>
-      </div>
-      <div class="scenario__ending">В конце задай вопрос: а какие фразы вы говорите своему мужчине каждый день?</div>
-    </div>
-
-    <!-- Сценарий 3 -->
-    <div class="scenario">
-      <div class="scenario__header">
-        <div class="scenario__num">Сценарий № 03</div>
-        <h3 class="scenario__title">3 типа людей, с которыми я перестала дружить после 25</h3>
-      </div>
-      <div class="scenario__points">
-        <div class="scenario__point">
-          <span class="scenario__point-label">Тип 1 — самый узнаваемый.</span>
-          <span class="scenario__point-text">Появляется только когда ему плохо — и исчезает когда хорошо тебе. Один яркий признак поведения — без лишних слов.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Тип 2 — неожиданный, обычно не считают токсичным.</span>
-          <span class="scenario__point-text">Вечно соревнующийся. Тот, кто всегда делает твой успех чуть меньше своего. Люди удивляются — и сразу вспоминают кого-то конкретного.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Тип 3 — самый болезненный.</span>
-          <span class="scenario__point-text">Тот, кого любишь — но после которого всегда чувствуешь себя хуже. Именно этот вызывает комментарии и пересылки.</span>
-        </div>
-      </div>
-      <div class="scenario__tip"><strong>Совет:</strong> Этот ролик хорошо снимать в спокойном настроении, почти задумчиво — не агрессивно. Тогда люди чувствуют что ты говоришь от опыта, а не от обиды.</div>
-    </div>
-
-    <!-- Сценарий 4 -->
-    <div class="scenario">
-      <div class="scenario__header">
-        <div class="scenario__num">Сценарий № 04</div>
-        <h3 class="scenario__title">Наши принципы в отношениях, за которые нас осуждает общество — и мы готовы к этому разговору</h3>
-      </div>
-      <div class="scenario__points">
-        <div class="scenario__point">
-          <span class="scenario__point-label">Принцип 1 — самый провокационный.</span>
-          <span class="scenario__point-text">Что-то, что большинство считает «неправильным» в отношениях — но у вас это работает. Например: «мы спим в разных спальнях» или «мы всегда имеем доступ к геолокации друг друга».</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Принцип 2 — неожиданный для пары.</span>
-          <span class="scenario__point-text">То, что обычно скрывают — вы говорите открыто. Люди либо восхищаются либо не понимают.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Принцип 3 — самый личный.</span>
-          <span class="scenario__point-text">Тот, который вы выработали через что-то сложное в отношениях. Чувствуется что за ним стоит история.</span>
-        </div>
-      </div>
-      <div class="scenario__ending">Концовка: Смотрите друг на друга — и один говорит: «Осуждайте». Без улыбки, это сильнее любых слов.</div>
-      <div class="scenario__tip"><strong>Совет:</strong> Снимайте в кадре вдвоём, близко. Говорите по очереди — не по сценарию, а как будто подхватываете мысль друг друга.</div>
-    </div>
-
-    <!-- Сценарий 5 -->
-    <div class="scenario">
-      <div class="scenario__header">
-        <div class="scenario__num">Сценарий № 05</div>
-        <h3 class="scenario__title">5 токсичных комплиментов от мужчин, которые оскорбляют женщин — и их говорит каждый второй</h3>
-      </div>
-      <div class="scenario__points">
-        <div class="scenario__point">
-          <span class="scenario__point-label">Комплимент 1 — самый распространённый.</span>
-          <span class="scenario__point-text">Звучит как похвала — но внутри что-то сжимается. Например: «ты красивая, когда не красишься».</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Комплимент 2 — через сравнение с другими.</span>
-          <span class="scenario__point-text">«Ты не такая, как все». Объяснить одним предложением, без лекции.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Комплимент 3 — про внешность, на самом деле про контроль.</span>
-          <span class="scenario__point-text">Многие не осознают что это токсично — и именно это цепляет.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Комплимент 4 — про ум с уменьшением.</span>
-          <span class="scenario__point-text">«Ты неплохо соображаешь для девушки» и всё в этом духе.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Комплимент 5 — самый неожиданный.</span>
-          <span class="scenario__point-text">Тот, который звучит мило — но после него чувствуешь себя объектом, а не человеком. Ради него досматривают.</span>
-        </div>
-      </div>
-      <div class="scenario__ending">«Комплимент — это когда после него хочется улыбнуться. А не оправдываться. Перешли это своему парню».</div>
-    </div>
-
-    <!-- Сценарий 6 -->
-    <div class="scenario">
-      <div class="scenario__header">
-        <div class="scenario__num">Сценарий № 06</div>
-        <h3 class="scenario__title">3 тяжёлых испытания, через которые я прошла когда-то — и сейчас я благодарна себе за них</h3>
-      </div>
-      <div class="scenario__points">
-        <div class="scenario__point">
-          <span class="scenario__point-label">Испытание 1 — самое личное и тяжёлое.</span>
-          <span class="scenario__point-text">То, о чём говорить страшно. Именно оно держит до конца — люди чувствуют что ты открываешься по-настоящему.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Испытание 2 — самое узнаваемое.</span>
-          <span class="scenario__point-text">Что-то про отношения, потерю или предательство. Называешь коротко, без деталей. Деталей не нужно — нужна эмоция.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Испытание 3 — провал, ставший уроком.</span>
-          <span class="scenario__point-text">То, что внешне выглядело как провал — но внутри что-то сломалось и пересобралось заново. То, за что было стыдно — а оказалось уроком.</span>
-        </div>
-      </div>
-      <div class="scenario__ending">«Я не знала тогда, что всё это — не про боль. Это было про то, кем я стану».</div>
-      <div class="scenario__tip"><strong>Совет:</strong> Этот ролик снимай без макияжа или в минимальном. Простой фон, тихий голос. Чем проще картинка — тем сильнее слова.</div>
-    </div>
-
-    <!-- Сценарий 7 -->
-    <div class="scenario">
-      <div class="scenario__header">
-        <div class="scenario__num">Сценарий № 07</div>
-        <h3 class="scenario__title">5 вещей, которые я больше никогда не буду делать ради «отношений»</h3>
-      </div>
-      <div class="scenario__points">
-        <div class="scenario__point">
-          <span class="scenario__point-label">Вещь 1 — потеря себя под видом интереса.</span>
-          <span class="scenario__point-text">Никогда не залезу в его телефон. И никогда больше не пойду изучать странички его бывших. Тот, кто ищет — всегда найдет.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Вещь 2 — принимать его версию себя.</span>
-          <span class="scenario__point-text">Когда он говорит «ты слишком эмоциональная», «ты слишком много хочешь» — и ты начинаешь в это верить.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Вещь 3 — неожиданная.</span>
-          <span class="scenario__point-text">Никогда больше не буду соглашаться на «я не готов к отношениям» — и при этом оставаться рядом в надежде что он созреет.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Вещь 4 — про окружение.</span>
-          <span class="scenario__point-text">Отдаляться от подруг, потому что партнёру некомфортно. Многие узнают себя — и именно здесь начинаются комментарии.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Вещь 5 — самая личная.</span>
-          <span class="scenario__point-text">То, что ты сама делала и о чём сейчас говоришь впервые. Ради неё досматривают до конца.</span>
-        </div>
-      </div>
-      <div class="scenario__ending">«Отношения — это когда ты остаёшься собой. А не когда от себя остаётся всё меньше».</div>
-    </div>
-
-    <!-- Сценарий 8 -->
-    <div class="scenario">
-      <div class="scenario__header">
-        <div class="scenario__num">Сценарий № 08</div>
-        <h3 class="scenario__title">Правила, по которым я выбираю подруг — звучат жёстко, но именно поэтому я дружу со своими близкими подругами</h3>
-      </div>
-      <div class="scenario__points">
-        <div class="scenario__point">
-          <span class="scenario__point-label">Правило 1 — самое неожиданное.</span>
-          <span class="scenario__point-text">Я никогда не дружу с теми, кто жалуется но ничего не меняет. Не один раз — а годами, по кругу, об одном и том же.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Правило 2 — как человек реагирует на твой успех.</span>
-          <span class="scenario__point-text">Смотрю не на то, как подруга реагирует на мои проблемы — а на то, как она реагирует на мои успехи. Это показывает всё.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Правило 3 — неочевидное, но точное.</span>
-          <span class="scenario__point-text">Если после встречи с человеком я чувствую усталость — неважно насколько он хороший. Тело не врёт.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Правило 4 — самое личное.</span>
-          <span class="scenario__point-text">То, которое ты выработала через конкретный опыт предательства или потери.</span>
-        </div>
-      </div>
-      <div class="scenario__ending">«Подруга — это не тот кто рядом давно. Это тот после кого ты чувствуешь себя лучше чем до».</div>
-      <div class="scenario__tip"><strong>Совет:</strong> Говори спокойно и уверенно — не как претензию к людям, а как что-то что ты поняла про себя. Тогда это звучит мудро, а не высокомерно.</div>
-    </div>
-
-    <!-- Сценарий 9 -->
-    <div class="scenario">
-      <div class="scenario__header">
-        <div class="scenario__num">Сценарий № 09</div>
-        <h3 class="scenario__title">Ошибки, которые я совершила в первых отношениях — и которые вижу теперь у многих молодых девушек</h3>
-      </div>
-      <div class="scenario__points">
-        <div class="scenario__point">
-          <span class="scenario__point-label">Ошибка 1 — кажется любовью, но ею не является.</span>
-          <span class="scenario__point-text">Я думала что это нормально — когда он воспитывает и указывает, какие фото можно выставлять, с кем нельзя общаться. Многие называют это заботой.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Ошибка 2 — теряешь себя незаметно.</span>
-          <span class="scenario__point-text">Я перестала замечать что мои интересы, подруги, планы — всё постепенно исчезло. Я сама всё принесла в жертву и назвала это отношениями.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Ошибка 3 — неочевидная.</span>
-          <span class="scenario__point-text">Я путала его потенциал с реальностью. Любила не его — а того, кем он мог бы стать. И строила отношения с человеком которого не существовало.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Ошибка 4 — «это про меня».</span>
-          <span class="scenario__point-text">Я думала что если буду достаточно хорошей — он изменится. Готовила лучше, скандалила меньше, терпела больше. Спойлер: не изменился.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Ошибка 5 — самая главная.</span>
-          <span class="scenario__point-text">Я думала что любовь — это когда терпишь, прощаешь, остаёшься несмотря ни на что. Но однажды поняла что всё это время путала любовь с привязанностью, страхом одиночества и нежеланием признать что ошиблась.</span>
-        </div>
-      </div>
-      <div class="scenario__ending">«Настоящая любовь — это когда тебе не надо себя уговаривать остаться».</div>
-    </div>
-
-    <!-- Сценарий 10 -->
-    <div class="scenario">
-      <div class="scenario__header">
-        <div class="scenario__num">Сценарий № 10</div>
-        <h3 class="scenario__title">То, что я поняла про себя только к [возрасту] — и о чём никто не предупреждал</h3>
-      </div>
-      <div class="scenario__points">
-        <div class="scenario__point">
-          <span class="scenario__point-label">Инсайт 1 — самый неожиданный.</span>
-          <span class="scenario__point-text">Я поняла что всю жизнь выбирала людей которые меня не выбирали. И называла это судьбой.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Инсайт 2 — про отношение к себе.</span>
-          <span class="scenario__point-text">Я поняла что моя доброта была не добротой — а страхом что меня не полюбят если я скажу нет.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Инсайт 3 — про силу.</span>
-          <span class="scenario__point-text">Я поняла что сила — это не когда не больно. А когда больно — и ты всё равно идёшь.</span>
-        </div>
-        <div class="scenario__point">
-          <span class="scenario__point-label">Инсайт 4 — самый личный.</span>
-          <span class="scenario__point-text">То, что открылось через конкретный момент или конкретного человека.</span>
-        </div>
-      </div>
-      <div class="scenario__ending">«Взросление — это не про возраст. Это про то, сколько раз ты выбрала себя».</div>
-      <div class="scenario__tip"><strong>Совет:</strong> Говори медленно. Пусть каждая фраза немного «зависает» — это заставляет досматривать.</div>
-    </div>
-
+  <!-- Сценарий 4 -->
+  <div class="scenario-card">
+    <div class="scenario-card__num">Сценарий 04</div>
+    <div class="scenario-card__title">Наши принципы в отношениях, за которые нас осуждает общество — и мы готовы к этому разговору</div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Принцип 1 — самый провокационный.</span> <span class="scenario-card__point-text">Что-то, что большинство считает «неправильным» в отношениях — но у вас это работает. Например: «мы спим в разных спальнях» или «мы всегда имеем доступ к геолокации друг друга».</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Принцип 2 — неожиданный для пары.</span> <span class="scenario-card__point-text">То, что обычно скрывают — вы говорите открыто. Люди либо восхищаются либо не понимают.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Принцип 3 — самый личный.</span> <span class="scenario-card__point-text">Тот, который вы выработали через что-то сложное в отношениях. Чувствуется что за ним стоит история.</span></div>
+    <div class="scenario-card__ending">Концовка: Смотрите друг на друга — и один говорит: «Осуждайте». Без улыбки, это сильнее любых слов.</div>
+    <div class="scenario-card__tip"><strong>Совет:</strong> Снимайте в кадре вдвоём, близко. Говорите по очереди — не по сценарию, а как будто подхватываете мысль друг друга.</div>
   </div>
-</section>
 
-<!-- Footer -->
-<section class="dark-section" style="padding: 60px 0;">
-  <div class="container" style="text-align: center;">
-    <p class="intro__text" style="color: #d5cfc8; font-size: 22px;">
-      Это сокращённая версия материалов.<br>
-      Полные сценарии с нейроописаниями — <em style="color: #c9a07a;">на интенсиве.</em>
-    </p>
+  <!-- Сценарий 5 -->
+  <div class="scenario-card">
+    <div class="scenario-card__num">Сценарий 05</div>
+    <div class="scenario-card__title">5 токсичных комплиментов от мужчин, которые оскорбляют женщин — и их говорит каждый второй</div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Комплимент 1 — самый распространённый.</span> <span class="scenario-card__point-text">Звучит как похвала — но внутри что-то сжимается. Например: «ты красивая, когда не красишься».</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Комплимент 2 — через сравнение с другими.</span> <span class="scenario-card__point-text">«Ты не такая, как все». Объяснить одним предложением, без лекции.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Комплимент 3 — про внешность, на самом деле про контроль.</span> <span class="scenario-card__point-text">Многие не осознают что это токсично — и именно это цепляет.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Комплимент 4 — про ум с уменьшением.</span> <span class="scenario-card__point-text">«Ты неплохо соображаешь для девушки» и всё в этом духе.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Комплимент 5 — самый неожиданный.</span> <span class="scenario-card__point-text">Тот, который звучит мило — но после него чувствуешь себя объектом, а не человеком. Ради него досматривают.</span></div>
+    <div class="scenario-card__ending">«Комплимент — это когда после него хочется улыбнуться. А не оправдываться. Перешли это своему парню».</div>
   </div>
-</section>
+
+  <!-- Сценарий 6 -->
+  <div class="scenario-card">
+    <div class="scenario-card__num">Сценарий 06</div>
+    <div class="scenario-card__title">3 тяжёлых испытания, через которые я прошла когда-то — и сейчас я благодарна себе за них</div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Испытание 1 — самое личное и тяжёлое.</span> <span class="scenario-card__point-text">То, о чём говорить страшно. Именно оно держит до конца — люди чувствуют что ты открываешься по-настоящему.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Испытание 2 — самое узнаваемое.</span> <span class="scenario-card__point-text">Что-то про отношения, потерю или предательство. Называешь коротко, без деталей. Деталей не нужно — нужна эмоция.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Испытание 3 — провал, ставший уроком.</span> <span class="scenario-card__point-text">То, что внешне выглядело как провал — но внутри что-то сломалось и пересобралось заново.</span></div>
+    <div class="scenario-card__ending">«Я не знала тогда, что всё это — не про боль. Это было про то, кем я стану».</div>
+    <div class="scenario-card__tip"><strong>Совет:</strong> Этот ролик снимай без макияжа или в минимальном. Простой фон, тихий голос. Чем проще картинка — тем сильнее слова.</div>
+  </div>
+
+  <!-- Сценарий 7 -->
+  <div class="scenario-card">
+    <div class="scenario-card__num">Сценарий 07</div>
+    <div class="scenario-card__title">5 вещей, которые я больше никогда не буду делать ради «отношений»</div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Вещь 1 — потеря себя под видом интереса.</span> <span class="scenario-card__point-text">Никогда не залезу в его телефон. И никогда больше не пойду изучать странички его бывших. Тот, кто ищет — всегда найдет.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Вещь 2 — принимать его версию себя.</span> <span class="scenario-card__point-text">Когда он говорит «ты слишком эмоциональная», «ты слишком много хочешь» — и ты начинаешь в это верить.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Вещь 3 — неожиданная.</span> <span class="scenario-card__point-text">Никогда больше не буду соглашаться на «я не готов к отношениям» — и при этом оставаться рядом в надежде что он созреет.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Вещь 4 — про окружение.</span> <span class="scenario-card__point-text">Отдаляться от подруг, потому что партнёру некомфортно. Многие узнают себя.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Вещь 5 — самая личная.</span> <span class="scenario-card__point-text">То, что ты сама делала и о чём сейчас говоришь впервые. Ради неё досматривают до конца.</span></div>
+    <div class="scenario-card__ending">«Отношения — это когда ты остаёшься собой. А не когда от себя остаётся всё меньше».</div>
+  </div>
+
+  <!-- Сценарий 8 -->
+  <div class="scenario-card">
+    <div class="scenario-card__num">Сценарий 08</div>
+    <div class="scenario-card__title">Правила, по которым я выбираю подруг — звучат жёстко, но именно поэтому я дружу со своими близкими подругами</div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Правило 1 — самое неожиданное.</span> <span class="scenario-card__point-text">Я никогда не дружу с теми, кто жалуется но ничего не меняет. Не один раз — а годами, по кругу, об одном и том же.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Правило 2 — как человек реагирует на твой успех.</span> <span class="scenario-card__point-text">Смотрю не на то, как подруга реагирует на мои проблемы — а на то, как она реагирует на мои успехи. Это показывает всё.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Правило 3 — неочевидное, но точное.</span> <span class="scenario-card__point-text">Если после встречи с человеком я чувствую усталость — неважно насколько он хороший. Тело не врёт.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Правило 4 — самое личное.</span> <span class="scenario-card__point-text">То, которое ты выработала через конкретный опыт предательства или потери.</span></div>
+    <div class="scenario-card__ending">«Подруга — это не тот кто рядом давно. Это тот после кого ты чувствуешь себя лучше чем до».</div>
+    <div class="scenario-card__tip"><strong>Совет:</strong> Говори спокойно и уверенно — не как претензию к людям, а как что-то что ты поняла про себя. Тогда это звучит мудро, а не высокомерно.</div>
+  </div>
+
+  <!-- Сценарий 9 -->
+  <div class="scenario-card">
+    <div class="scenario-card__num">Сценарий 09</div>
+    <div class="scenario-card__title">Ошибки, которые я совершила в первых отношениях — и которые вижу теперь у многих молодых девушек</div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Ошибка 1 — кажется любовью, но ею не является.</span> <span class="scenario-card__point-text">Я думала что это нормально — когда он воспитывает и указывает, какие фото можно выставлять, с кем нельзя общаться. Многие называют это заботой.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Ошибка 2 — теряешь себя незаметно.</span> <span class="scenario-card__point-text">Я перестала замечать что мои интересы, подруги, планы — всё постепенно исчезло. Я сама всё принесла в жертву и назвала это отношениями.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Ошибка 3 — неочевидная.</span> <span class="scenario-card__point-text">Я путала его потенциал с реальностью. Любила не его — а того, кем он мог бы стать.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Ошибка 4 — «это про меня».</span> <span class="scenario-card__point-text">Я думала что если буду достаточно хорошей — он изменится. Готовила лучше, скандалила меньше, терпела больше. Спойлер: не изменился.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Ошибка 5 — самая главная.</span> <span class="scenario-card__point-text">Я думала что любовь — это когда терпишь, прощаешь, остаёшься несмотря ни на что. Но однажды поняла что путала любовь с привязанностью и страхом одиночества.</span></div>
+    <div class="scenario-card__ending">«Настоящая любовь — это когда тебе не надо себя уговаривать остаться».</div>
+  </div>
+
+  <!-- Сценарий 10 -->
+  <div class="scenario-card">
+    <div class="scenario-card__num">Сценарий 10</div>
+    <div class="scenario-card__title">То, что я поняла про себя только к [возрасту] — и о чём никто не предупреждал</div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Инсайт 1 — самый неожиданный.</span> <span class="scenario-card__point-text">Я поняла что всю жизнь выбирала людей которые меня не выбирали. И называла это судьбой.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Инсайт 2 — про отношение к себе.</span> <span class="scenario-card__point-text">Я поняла что моя доброта была не добротой — а страхом что меня не полюбят если я скажу нет.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Инсайт 3 — про силу.</span> <span class="scenario-card__point-text">Я поняла что сила — это не когда не больно. А когда больно — и ты всё равно идёшь.</span></div>
+    <div class="scenario-card__point"><span class="scenario-card__point-label">Инсайт 4 — самый личный.</span> <span class="scenario-card__point-text">То, что открылось через конкретный момент или конкретного человека.</span></div>
+    <div class="scenario-card__ending">«Взросление — это не про возраст. Это про то, сколько раз ты выбрала себя».</div>
+    <div class="scenario-card__tip"><strong>Совет:</strong> Говори медленно. Пусть каждая фраза немного «зависает» — это заставляет досматривать.</div>
+  </div>
+
+  <!-- Footer note -->
+  <p class="footer-note">Это сокращённая версия материалов.<br>Полные сценарии с нейроописаниями — <em>на интенсиве.</em></p>
+
+</div>
 
 <footer class="footer">
-  <div class="container">
-    <p>&copy; 2026 &middot; Все права защищены</p>
-  </div>
+  <p>&copy; 2026 &middot; maysoulme &middot; Все права защищены</p>
 </footer>
 
 </body>
